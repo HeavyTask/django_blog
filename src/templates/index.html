@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% for entry in object_list %}
+        {% include "partials/_entry.html" with entry=entry only %}
+        
+        {% empty %}
+        <p>No blog entries yet.</p>
+    {% endfor %}
+    
+{% endblock content %}
